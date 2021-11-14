@@ -4,7 +4,7 @@ export default class Footer extends Component {
     render() {
         return (
 <>
-<p>...and I am the footer</p>
+<footer>Designed and Developed by <span class="seatea">Sea Tea</span></footer>
 </>
         )
     }

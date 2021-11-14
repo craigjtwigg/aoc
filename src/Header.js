@@ -3,9 +3,20 @@ import React, { Component } from 'react'
 export default class Header extends Component {
     render() {
         return (
-            <div>
-               <h1> hello, im a header </h1>
+        <div className="top-wrapper">
+            <div className="logo-wrapper">
+                <h1>ALEX OGDEN CLARK</h1>
             </div>
+            <div className="nav-wrapper">
+                <ul className="nav">
+                    <li><a href="/editorial.html">EDITORIAL</a></li>
+                    <li><a href="/tv.html">FILM & TELEVISION</a></li>
+                    <li><a href="/glow-up.html">CELEBRITY</a></li>
+                    <li><a href="/ecommerce.html">E-COMMERCE</a></li>
+                    <li><a href="/contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
         )
     }
 }
