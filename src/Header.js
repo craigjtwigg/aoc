@@ -9,7 +9,7 @@ export default class Header extends Component {
             </div>
             <div className="nav-wrapper">
                 <ul className="nav">
-                    <li><a href="/editorial.html">EDITORIAL</a></li>
+                    <li><p className="nav-link" key="editorial" onClick={(e) => this.props.filterGallery('editorial')}>EDITORIAL</p></li>
                     <li><a href="/tv.html">FILM & TELEVISION</a></li>
                     <li><a href="/glow-up.html">CELEBRITY</a></li>
                     <li><a href="/ecommerce.html">E-COMMERCE</a></li>

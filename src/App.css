@@ -34,13 +34,13 @@ body {
     margin: 0 1rem;
 }
 
-.nav > li > a {
+.nav-link, .nav > li > a {
     cursor: pointer;
     color: #000000;
     text-decoration: none;
 }
 
-.nav > li > a:hover {
+.nav-link:hover, .nav > li > a:hover {
     text-decoration: underline;
     text-decoration-thickness: 0.4rem;
     text-decoration-color: rgb(255, 124, 1);

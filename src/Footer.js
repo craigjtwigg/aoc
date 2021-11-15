@@ -4,7 +4,7 @@ export default class Footer extends Component {
     render() {
         return (
 <>
-<footer>Designed and Developed by <span class="seatea">Sea Tea</span></footer>
+<footer>Designed and Developed by <span className="seatea">Sea Tea</span></footer>
 </>
         )
     }
