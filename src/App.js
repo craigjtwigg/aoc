@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Body from './Body';
-import Footer from './Footer';
+import Header from './Components/Header';
+import Gallery from './Components/Gallery';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
+import { galleryData } from './assets/gallery/data';
 import './App.css';
 
 export default class App extends Component {
@@ -9,27 +11,30 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      view: 'home',
+      activeGallery: galleryData,
     };
 
-    this.filterGallery = this.filterGallery.bind(this);
+    this.handleCategory = this.handleCategory.bind(this);
   }
 
-  filterGallery = (category) => {
-    console.log(category)
+  handleCategory = (category) => {
+    let filteredGallery = galleryData.filter(item => item.category === category)
     this.setState({
-      view: category,
+      activeGallery: category === 'home' ? galleryData : filteredGallery,
     });
   };
 
+
+
   render() {
-    const { view } = this.state;
-    const filterGallery = this.filterGallery;
+    const { activeGallery } = this.state;
+    const handleCategory = this.handleCategory;
 
     return (
       <>
-        <Header filterGallery={filterGallery} />
-        <Body />
+        <Header handleCategory={handleCategory} />
+        <Gallery activeGallery={activeGallery}/>
+        <Contact />
         <Footer />
       </>
     );
