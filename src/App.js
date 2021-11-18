@@ -12,6 +12,8 @@ export default class App extends Component {
 
     this.state = {
       activeGallery: galleryData,
+      isMobile: false,
+      isContact: false,
     };
 
     this.handleCategory = this.handleCategory.bind(this);
@@ -21,20 +23,32 @@ export default class App extends Component {
     let filteredGallery = galleryData.filter(item => item.category === category)
     this.setState({
       activeGallery: category === 'home' ? galleryData : filteredGallery,
+      isMobile: this.state.isMobile,
+      isContact: false,
     });
   };
 
+    renderContact = () => {
+    this.setState({
+      activeGallery: this.state.activeGallery,
+      isMobile: this.state.isMobile,
+      isContact: true,
+    });
+  };
 
+  
 
   render() {
     const { activeGallery } = this.state;
     const handleCategory = this.handleCategory;
+    const renderContact = this.renderContact
 
     return (
       <>
-        <Header handleCategory={handleCategory} />
-        <Gallery activeGallery={activeGallery}/>
-        <Contact />
+        <Header handleCategory={handleCategory} renderContact={renderContact}/>
+        {this.state.isContact ? (<Contact />) : (<Gallery activeGallery={activeGallery}/>)}
+        
+        
         <Footer />
       </>
     );

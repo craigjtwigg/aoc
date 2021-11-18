@@ -13,7 +13,7 @@ export default class Header extends Component {
                     <li><p className="nav-link" onClick={(e) => this.props.handleCategory('tv')}>FILM & TELEVISION</p></li>
                     <li><p className="nav-link" onClick={(e) => this.props.handleCategory('celebrity')}>CELEBRITY</p></li>
                     <li><p className="nav-link" onClick={(e) => this.props.handleCategory('ecommerce')}>E-COMMERCE</p></li>
-                    <li><p className="nav-link">CONTACT</p></li>
+                    <li><p className="nav-link" onClick={() => this.props.renderContact()}>CONTACT</p></li>
                 </ul>
             </div>
         </div>
