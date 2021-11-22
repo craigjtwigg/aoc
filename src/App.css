@@ -31,6 +31,10 @@ h1:hover {
     font-family: Vidaloka;
 }
 
+.mobile-nav-icon {
+    display: none;
+}
+
 .nav {
     display: flex;
 }
@@ -123,6 +127,12 @@ footer {
 
 }
 
+.closeNav {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
 @media only screen and (max-width: 1000px) {
     body {
         font-size: 10px;
@@ -158,6 +168,12 @@ footer {
     .nav {
         display: none;
     }
+
+.mobile-nav-icon {
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
+}
 
 .gallery{
     -webkit-column-count: 1;

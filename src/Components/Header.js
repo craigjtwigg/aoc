@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FilterListIcon from '@mui/icons-material/FilterList';
 
 export default class Header extends Component {
     render() {
@@ -8,6 +9,8 @@ export default class Header extends Component {
                 <h1 onClick={(e) => this.props.handleCategory('home')}>ALEX OGDEN CLARK</h1>
             </div>
             <div className="nav-wrapper">
+                <div class="mobile-nav-icon"> <FilterListIcon onClick={() => this.props.toggleMobileNav()} /></div>
+               
                 <ul className="nav">
                     <li><p className="nav-link" onClick={(e) => this.props.handleCategory('editorial')}>EDITORIAL</p></li>
                     <li><p className="nav-link" onClick={(e) => this.props.handleCategory('tv')}>FILM & TELEVISION</p></li>
