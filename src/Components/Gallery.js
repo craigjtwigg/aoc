@@ -14,7 +14,8 @@ export default class Gallery extends Component {
         <ImageList variant="masonry" cols={3} gap={8}>
   {this.props.activeGallery.map((item) => (
     <ImageListItem key={item.imgSrc}>
-      <img
+      <img className="gallery-item"
+      onClick={()=> this.props.setActiveImage(item)}
         src={`${item.imgSrc}?w=248&fit=crop&auto=format`}
         srcSet={`${item.imgSrc}?w=248&fit=crop&auto=format&dpr=2 2x`}
         alt={item.alt}
