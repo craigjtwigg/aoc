@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import CloseIcon from '@mui/icons-material/Close';
+import Nav from './Nav';
 
 export default class MobileNav extends Component {
     render() {
         return (
             <>
-            <div className="closeNav">
-                <CloseIcon onClick={() => this.props.toggleMobileNav()}/>
-            </div>
+             
+
+                <Nav mobileNav={this.props.mobileNav}
+              handleCategory={this.props.handleCategory}
+              renderContact={this.props.renderContact}/>
+                  
             </>
         )
     }

@@ -30,7 +30,7 @@ export default class App extends Component {
       activeGallery: category === 'home' ? galleryData : filteredGallery,
       isMobile: this.state.isMobile,
       isContact: false,
-      mobileNav: this.state.mobileNav,
+      mobileNav: false,
     });
   };
 
@@ -60,9 +60,9 @@ export default class App extends Component {
 
     return (
       <>
-        <Header toggleMobileNav={toggleMobileNav} handleCategory={handleCategory} renderContact={renderContact} />
+        <Header mobileNav={mobileNav} toggleMobileNav={toggleMobileNav} handleCategory={handleCategory} renderContact={renderContact} />
         {mobileNav ? (
-          <MobileNav toggleMobileNav={toggleMobileNav}/>
+          <MobileNav mobileNav={mobileNav} toggleMobileNav={toggleMobileNav} handleCategory={handleCategory} renderContact={renderContact} />
         ) : this.state.isContact ? (
           <Contact />
         ) : (

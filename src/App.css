@@ -165,8 +165,16 @@ footer {
         font-size: 22px;
     }
 
-    .nav {
+    .nav, .desktop-nav {
         display: none;
+    }
+
+    .mobile-nav{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        font-size: 1.5rem;
+        text-align: center;
     }
 
 .mobile-nav-icon {
