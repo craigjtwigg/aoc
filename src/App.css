@@ -177,6 +177,7 @@ footer {
 
 .active-image-details {
     font-size: 2rem;
+    margin-left: 20px;
 }
 
 .photoset {
@@ -187,6 +188,23 @@ footer {
 
 .return-to-gallery {
     display: none;
+}
+
+.related-images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.related-images-thumb {
+    height: 150px;
+    width: auto;
+    margin: 5px;
+    filter: grayscale(1);
+}
+
+.related-images-thumb:hover{
+    cursor: pointer;
+    filter: none;
 }
 
 @media only screen and (max-width: 1000px) {

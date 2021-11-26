@@ -87,7 +87,7 @@ export default class App extends Component {
     const closeActiveImage = this.closeActiveImage;
 
     return (
-       this.state.activeImage?<> <ImageView activeImage = {activeImage} closeActiveImage={closeActiveImage}/> </> : 
+       this.state.activeImage?<> <ImageView setActiveImage={setActiveImage} activeImage = {activeImage} activeGallery={activeGallery} closeActiveImage={closeActiveImage}/> </> : 
        <>
         <Header mobileNav={mobileNav} toggleMobileNav={toggleMobileNav} handleCategory={handleCategory} renderContact={renderContact} />
         {mobileNav ? (
